@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books-Client</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="LoadPage()">
+    
+    <header html-include="./components/navbar.html"></header>
+    <div id="root">
+       <!-- main content is rendered here -->
+    </div>
+    <header html-include="../components/footer.html"></header>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!-- <script src="./node_modules/bootstrap/dist/css/bootstrap.css"></script> -->
+    <!-- <script src="./node_modules/bootstrap/dist/css/bootstrap.min.css"></script> -->
+   
+    <script src="./scripts/services/author-manager.js"></script>
+    <script src="./scripts/controller/app.js"></script>
+    <script src="./main.js"></script>
+    <script src="./scripts/utils.js"></script>
+</body>
+</html>

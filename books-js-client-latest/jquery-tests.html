@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>I am the first paragraph</p>
+    <p>I am the second paragraph and I contain somehing <span class="important">Important</span></p>
+    <span>I am a humble span and not a para</span>
+    <p class="important">I am the a very important paragraph</p>
+    <p>I am the last paragraph</p>
+
+    <hr>
+    <div id="details"></div>
+    <hr>
+
+    <button onClick="countPara()">Count Pargraph</button>
+    <button onClick="highlightImportant()">Hightlight Important</button>
+    <button onClick="copyParagraphs()">Copy Paragraphs</button>
+    <button onClick="clearDetails()">Clear Details</button>
+    <button onClick="toggleParas()">Toggle Paragraph</button>
+    <button id="enabler" onClick="enableClickToHide()">Enable Click to Hide</button>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        const countPara=()=>{
+            var paras=$("p");
+            console.log(`Total  ${paras.length} paragraphs`);
+            $("#details").html(`Total ${paras.length} paras`);
+        }
+
+        const highlightImportant=()=>{
+            $(".important").css('background','yellow');
+
+        }
+
+        const copyParagraphs=()=>{
+
+            var details=$("#details");
+
+            $("p").each(function(){
+                
+                var html=$(this).html();
+                details.append(`<p>${html}</p>`);
+            });
+        }
+
+        const clearDetails=()=>{
+            $("#details").empty();
+        }
+
+        const toggleParas=()=>{
+            $("p")
+                //.toggle(1000);
+                .fadeToggle(1000);
+        }
+
+        const enableClickToHide=()=>{
+            $("p").click(function(){
+
+                $(this).fadeOut(1000);
+               
+            });
+
+            $("p").css('cursor', 'pointer');
+
+            $("#enabler").fadeOut(1000);
+
+        }
+
+        $(enableClickToHide); //do it on form load
+
+
+    </script>
+
+    
+</body>
+</html>

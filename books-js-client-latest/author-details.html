@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Web</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <link rel="stylesheet" href="./site.css" />
+   
+</head>
+<body onLoad="">
+    <header include-html="./_header.html">
+    
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3 text-center">
+            
+            <h1>Author's  Details</h1>
+
+            <hr>
+            <div class="row"  id="details-div">
+                <div class="col-6 bg-primary">
+                        <img src="" />
+                </div>
+                <div class="col-6 bg-secondary">
+                      <h3>Author Name</h3>
+                      <h6>Date of Birth</h6>
+                      <h6>Biography</h6>
+                      <h6>Tags</h6>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+
+   
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="authorDeleteConfirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" >Delete <span class='author-name'></span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <p>Are you sure you want to delete <span class='author-name'></span></p>
+          <p class="text-danger">This change is irreversible</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+          <button type="button" class="btn btn-danger" id="author-delete-button">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+    <footer class="border-top footer bg-dark text-muted">
+        <div class="container">
+            &copy; 2022 - ConceptArchitect - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    
+    <script src="./node_modules/jquery/dist/jquery.min.js" ></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" > </script>
+    
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/services/author-manager.js"></script>
+    <script src="./scripts/controller/app.js"></script>
+    <script>
+        var a = window.location.search.split("=")[1];
+        GetDetailsById(a);
+   </script>
+</body>
+</html>

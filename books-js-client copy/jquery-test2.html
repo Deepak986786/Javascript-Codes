@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .question{
+            font-weight: bold;
+        }
+        .answer{
+            height:150px;
+            border:1px solid gray;
+            padding:20px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 >FaQs</h1>
+    <button toggle-action-show-all >Show All</button> 
+    <button toggle-action-hide-all >Hide All</button>
+
+    <div>
+        <p class="question" toggle-target="answer1">
+            Who named Mahatma Gandhi as the father of the nation?
+        </p>
+       
+        <p class="question" toggle-target="answer2">
+            Who wrote the National Song of India
+        </p>
+        <p class="answer" id="answer2" hide >
+            Bamkim Chandra Chaterjee
+            
+        </p>
+        <p class="question" toggle-target="answer3">
+            What is India's national Saluation. Where it comes  from?
+        </p>
+        <p class="answer" id="answer3" hide >
+            Jai Hind. It was the war cry of Indian National Army.
+            
+        </p>
+    </div>
+
+    
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="/scripts/my-jquery.js"></script>
+
+</body>
+</html>

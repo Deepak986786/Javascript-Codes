@@ -1,0 +1,32 @@
+<div id="author-info">
+    <h2 id="title"></h2>
+
+    <div class='row'>
+        <div class='col'>
+            <img id="author-image" src="@Model.PhotoUrl" class='cover-photo' />
+        </div>
+        <div class='col'>
+            <h3>Social</h3>
+            <div class="social-info">
+                <label>Email</label>
+                <p>
+                    <a id="email" href="mailto:@Model.Social.Email">@Model.Social.Email</a>
+                </p>
+            </div>
+            <div class="social-info">
+                <label>Web</label>
+                <p>
+                    <a  id='web' href="@Model.Social.WebSite">Visit Official Website</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <h2>Biography</h2>
+        <p id="biography">
+            
+        </p>
+    </div>
+</div>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery test</title>
+</head>
+<body>
+       
+    <p>I am the first paragrapgh</p>
+    <p>I am the second paragrapgh and i contain somehting  <span></span> </p>
+    <p>I am the first paragrapgh</p>
+    <p>I am the first paragrapgh</p>
+    <p>I am the first paragrapgh</p>
+    <p>I am the first paragrapgh</p>
+   
+    <hr>
+    <div id="details"></div>
+    <hr>
+
+    <button  onclick="CountPara()">count Paragraph</button>
+    <button onclick="CopyPara()">Copy paragraph</button>
+
+    <button onclick="clear()">clear</button>
+
+    <button onclick="togglePara()">Toggle</button>
+
+
+
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        const CountPara=()=>{
+            var paras=$("p");
+            console.log(`total paragraph : ${paras.length}`);
+            $("#details").html(`total paragraph is about ${paras.length}`);
+        }
+
+        const CopyPara=()=>{
+            var details=$("#details")
+            $("p").each(function(){
+                details.append($(this).html())
+            })
+        }
+
+        function clear(){
+            $("#details").empty();
+        }
+
+        function togglePara(){
+            $("p").toggle(500);
+        }
+    </script>
+
+
+</body>
+</html>

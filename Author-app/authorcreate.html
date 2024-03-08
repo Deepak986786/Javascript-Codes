@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create-author</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body>
+    <div class="navbar">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span><a href="author.html" >Authors</a></span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span> <a href="authorcreate.html" >Add new author</a></span>
+    </div>
+        <div class="create">
+                <form class="form" >
+                      <label>Id</label>
+                      <input type="text" name="id" id="authorid">
+                      <label>Name</label>
+                      <input type="text" name="name" id="name">
+                      <label>Biography</label>
+                      <input type="text" name="biography" id="biography">
+                      <label>PhotoUrl</label>
+                      <input type="text" name="photourl" id="photourl">
+                      <label>Birthdate</label>
+                      <input type="date" name="birthdate" id="birthdate">
+                      <label>Email</label>
+                      <input type="email" name="email" id="email">
+                      <label>Website</label>
+                      <input type="text" name="website" id="website">
+                    
+                      <input type="button" value="Add Author" onclick="addAuthor()">
+                </form>
+        </div>
+
+        <div id="authorlist">
+
+        </div>
+
+        <script src="Author.js"></script>
+        <script src="app.js"></script>
+       
+</body>
+</html>
