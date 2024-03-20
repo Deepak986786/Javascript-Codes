@@ -52,7 +52,7 @@ class BST {
 
   postOrder(root) {
     if (root === null) {
-      return;  
+      return;
     }
     this.postOrder(root.left);
     this.postOrder(root.right);
@@ -67,25 +67,39 @@ class BST {
     this.inOrder(root.right);
   }
 
-  minValue(root){
+  leverOrderBFS() {
+    let queue = [];
+    queue.push(this.root);
+    while (queue.length !== 0) {
+      let node = queue.shift();
+      console.log(node.value);
+      if (node.left != null) {
+        queue.push(node.left);
+      }
+      if (node.right != null) {
+        queue.push(node.right);
+      }
+    }
+  }
+
+  minValue(root) {
     // console.log(root.value);
-    if(root.left == null) {
+    if (root.left == null) {
       // console.log(root.value)
       return root.value;
-    }else{
+    } else {
       this.minValue(root.left);
     }
   }
 
-  maxValue(root){
+  maxValue(root) {
     // console.log(root.value);
-    if(root.right == null) {
-      console.log(root.value)
-    }else{
+    if (root.right == null) {
+      console.log(root.value);
+    } else {
       this.maxValue(root.right);
     }
   }
-
 }
 
 let tree = new BST();
@@ -105,7 +119,7 @@ tree.addItems(7);
 // console.log('------------------------')
 
 //tree.inOrder(tree.root);
-console.log('------------------------')
+console.log("------------------------");
 let min = tree.minValue(tree.root);
-let max= tree.maxValue(tree.root);
+let max = tree.maxValue(tree.root);
 console.log(min);
