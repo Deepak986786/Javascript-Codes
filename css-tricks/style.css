@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: mintcream;
+}
+
+.flex-demo{
+    width: 100%;
+    height: 400px;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+     gap: 20px;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+}
+
+.flex-demo > div {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+
+}
+
+.grid-demo{
+    width: 100%;
+    height: 400px;
+    background-color: pink;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(4 , 300px);
+    gap: 5px;
+}
+.grid-demo > div {
+    /* width: 100px; */
+    height: 100px;
+    background-color: green;
+}
+
+.grid-demo > div:first-child {
+    /* width: 100px; */
+    height: 100px;
+    background-color: rgb(88, 177, 88);
+    grid-auto-rows: 2;
+}
+
+
+.glassmorphism{
+    background-color: rgb(96, 148, 224);
+    width: 100%;
+    padding: 20px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1thtGw19xJXJ7AsbMpi6CVXonbSyBRUZYFg&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    display: flex;
+    flex-direction: row;
+}
+
+.glassmorphism .card{
+    width: 350px;
+    height: 350px;
+    /* background-color: blue; */
+    backdrop-filter: blur(5px);
+    align-self: flex-end;
+    justify-self: end;
+    color: beige;
+    border-radius: 20px;
+}
