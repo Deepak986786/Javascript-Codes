@@ -1,16 +1,20 @@
-import './App.css';
-import React from 'react';
-import {BrowserRouter , Route , Routes } from 'react-router-dom';
-import HomeRoutes from './Home/HomeRoutes';
-import ProblemRoutes from './problems/ProblemRoutes';
+import "./App.css";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import ProblemHome from "./problems/ProblemHome";
+import Home from "./Home/Home";
+import HomeLayout from "./Home/HomeLayout";
+import ProblemsLayout from "./problems/problemsLayout";
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-          <Route  path='/' element={HomeRoutes} />
-          <Route path="/problems" element={ProblemRoutes}/>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/"  element={<HomeLayout/>}>
+        <Route path="/home" element={<Home/>} />
+      </Route>
+      <Route path="/problems" element={<ProblemsLayout/>}>
+        <Route path="/problems/home" element={<ProblemHome/>} />
+      </Route>
+    </Routes>
   );
 }
 
