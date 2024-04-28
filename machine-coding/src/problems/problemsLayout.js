@@ -13,7 +13,24 @@ const ProblemsLayout = () => {
   const sidebarItems = [
     { title: "Star Rating", url: "/star-rating" },
     { title: "Accordian", url: "/accordian" },
-  ];
+    { title: "Sorting and Searching", url: "/sorting-searching" },
+    { title: "Infinite Scroll", url: "/infinite-scroll" },
+    { title: "Multiselect Dropdowns", url: "/multiselect-dropdowns" },
+    { title: "Typeahead", url: "/typeahead" },
+    { title: "Popover", url: "/popover" },
+    { title: "Carousel", url: "/carousel" },
+  ].sort((a, b) => {
+    const titleA = a.title.toUpperCase(); // Ignore case for sorting
+    const titleB = b.title.toUpperCase(); // Ignore case for sorting
+
+    if (titleA < titleB) {
+      return -1; // titleA comes before titleB
+    }
+    if (titleA > titleB) {
+      return 1; // titleA comes after titleB
+    }
+    return 0; // titles are equal
+  });
   return (
     <div className="">
       <div className="">
